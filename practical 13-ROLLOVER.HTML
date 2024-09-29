@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <img src="pastel.jpg" onmouseover="over()"  onmouseout="out()" id="img1" height="300" width="400">
+    </body>
+    <script>
+        function over()
+        {
+
+            document.getElementById("img1").src="glass.jpg";
+            document.getElementById("img1").style.height=200;
+            
+        }
+        function out()
+        {
+            document.getElementById("img1").src="grey.jpg";
+
+        }
+    </script>
+</html>

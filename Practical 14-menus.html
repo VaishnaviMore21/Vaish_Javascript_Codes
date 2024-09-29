@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <select name="menuitem" onchange="change(this)">
+            <option value="google">Google</option>
+            <option value="MSBTE">MSBTE</option>
+            <option value="insta">Instagram</option>
+        </select>
+    </body>
+    <script>
+        function change(ch)
+        {
+    page=ch.options[ch.selectedIndex].value;
+    if(page!="")
+    {
+        alert(page);
+        window.location=page;
+    }
+
+     
+        }
+    </script>
+</html>

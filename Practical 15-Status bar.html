@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <h3>Status Bar</h3>
+        <button onclick="alert(statusbar.visible)">statusbar visible</button>
+        <br>
+        <input type="button" onclick="openWind()" value="OpenWindow"><br>
+    </body>
+    <script>
+        var win;
+        function openWind()
+        {
+            var mywin=window.open("child.html","Parent frame","height=400,width=600,status=1");
+            mywin.status="Vaishnavi Here";
+        }
+    </script>
+</html>

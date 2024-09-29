@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <form >
+           Enter Email ID: <input type="email" name="email" id="mail">
+            <input type="button" onclick="check()">
+        </form>
+    </body>
+    <script>
+        function check()
+        {
+            var email=document.getElementById("mail").value;
+            var regex=/\w+@[a-zA-Z#_]+(\.[a-z]{2,3})+/;
+            var result=regex.test(email);
+            alert(result);
+        }
+    </script>
+</html>

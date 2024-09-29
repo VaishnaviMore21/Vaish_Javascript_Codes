@@ -1,0 +1,78 @@
+<html>
+    <head>
+    <style>
+        
+       #sec
+       {
+        font-size: 50px;
+        font-style: italic;
+        margin-left: 450px;
+
+       }
+     #btn {
+        height: 50px;
+        width: 100px;
+        margin-top: 40px;
+        margin-left: 250px;
+        background: linear-gradient(to bottom, #7f9de9, #514391);
+        border: none;
+        padding: 10px;
+        border-radius: 25px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      #btn:active {
+        transform: translateY(2px);
+      }
+#img
+{
+    margin-left: 600px;
+    border-radius: 20px;
+}
+
+    </style>
+    </head>
+ <body>
+
+ <h1 id="h1" style="text-align: center">Timer</h1>
+ <img src="" id="img">
+ <h2 id="h2" style="text-align: center;font-size: 50pt">00</h2>
+ <div id="sec">
+Enter seconds: <input type="text" id="t1" onkeyup="abc()"><br>
+ <input type="button"  id= "btn"value="Start" onclick="start_timer()">
+</div>
+
+ </body>
+ <script>
+ var id;
+ var seconds;
+ function abc(){
+ document.getElementById("h2").innerHTML=
+ document.getElementById("t1").value;
+ }
+ function start_timer(){
+ document.getElementById("h1").innerHTML="Timer";
+ seconds = parseInt(document.getElementById("t1").value);
+ id=setInterval("fun1()",2000); 
+ }
+ function fun1(){
+ if(seconds<10)
+ document.getElementById("h2").innerHTML="0"+seconds;
+ else
+ document.getElementById("h2").innerHTML=seconds;
+ 
+ if(seconds==0) {
+ clearInterval(id);
+ var audio = new Audio('/audio/alarm-clock-01.mp3');
+ audio.play();
+ document.getElementById("h1").innerHTML="Times Up";
+ document.getElementById('img').src="times.jpg";
+
+ 
+ }
+ else
+ seconds--;
+ }
+ </script> 
+</html>
